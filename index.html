@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body id="page">
+    <!-- Page Content -->
+    <div class="page-wrapper">
+        <!-- header -->
+        <header class="main-header">
+            <!-- 头部包括一个logo，一个移动端导航栏，一个主导航栏，或者有其他功能，视情况而定-->
+            <a href="#" class="home-url">
+                <img src="#" alt="site logo">
+            </a>
+
+            <!-- toggle 是切换的意思，即使用自定义效果来显示或隐藏匹配的元素 -->
+            <span class="mobile-nav-toggle">
+                <!-- 这里没有菜单，只有移动端打开菜单的按钮 -->
+                <i class=""></i>
+            </span>
+
+            <nav clas="main-nav">
+                <!-- 这是导航激活的横条，只有一个，用js控制left的多少来实现效果-->
+                <span class="active-indicator"></span>
+                <!-- 不理解，为什么是clean -->
+                <ul class="clean-list">
+                    <li class="menu-item-has=children active highlighted">
+                        <a href="#"></a>
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="#"></a>
+                            </li>
+                            <li>
+                                <a href="#"></a>
+                            </li>
+                            <li>
+                                <a href="#"></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href="#"></a>
+                    </li>
+                    <li class="menu-item-has-children">
+                        <a href="#"></a>
+                        <ul class="sub-menu">
+                            <li></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <!-- Content Wrapper -->
+        <div class="content-wrapper">
+            <section class="section section-home no-padding" id="home">
+                <div class="main-slider tt-slider">
+                    <!-- Slider Content -->
+                    <!-- 这里面不是轮播图，而是内容 -->
+                    <!-- slider-content是最外面的，与屏幕同宽，没有内外边距 -->
+                    <div class="slider-content">
+                        <!-- 第二个容器，具有内外边距，这个container的样式与boostrap一样 -->
+                        <div class="container">
+                            <!-- 内部容器，放着左右两个元素，清除父元素的浮动 -->
+                            <div class="inner-content clearfix">
+                                <!-- 这个元素只要设为50%；不需要考虑内外边距 -->
+                                <div class="inner-content-box">
+                                    <!-- 在这里为她设置右padding -->
+                                    <div class="event-info">
+                                        <h1 class="event-name"></h1>
+                                        <!-- 这行底下有一个绿色横条，用的是：after属性，无需另加一个元素，伪元素的高度算在本元素里 -->
+                                        <p class="event-date"></p>
+                                    </div>
+                                </div>
+                                <div class="inner-content-box">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+        <footer class="main-footer"></footer>
+    </div>
+</body>
+</html>
