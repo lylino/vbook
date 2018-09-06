@@ -1,91 +1,1494 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+    <link rel="shortcut icon" href="img/shortcut.png">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="swiper-4.2.6/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/mediaQuery.css">
+    <link rel="stylesheet" href="css/loginForm.css">
+    <link rel="stylesheet" href="css/homepage.css">
+
+    <title>南财狸猫二手置物</title>
+
+    <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/html5media.min.js"></script>
+    <script src="js/jquery.nav.js"></script>
+    <script src="swiper-4.2.6/dist/js/swiper.js"></script>
+    <script src="js/index.js"></script>
 </head>
 <body id="page">
-    <!-- Page Content -->
     <div class="page-wrapper">
-        <!-- header -->
+
         <header class="main-header">
-            <!-- 头部包括一个logo，一个移动端导航栏，一个主导航栏，或者有其他功能，视情况而定-->
-            <a href="#" class="home-url">
-                <img src="#" alt="site logo">
-            </a>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-2 header-icon " id="header-icon">
+                        <a class="main-icon" href="login.html">
+                            <img src="img/115346397785214999.jpg" atl="用户头像">
+                        </a>
+                    </div>
 
-            <!-- toggle 是切换的意思，即使用自定义效果来显示或隐藏匹配的元素 -->
-            <span class="mobile-nav-toggle">
-                <!-- 这里没有菜单，只有移动端打开菜单的按钮 -->
-                <i class=""></i>
-            </span>
+                    <div class="col-xs-7  header-search-bar">
+                        <div class="well search-bar">
+                            <input class="col-xs-10 search-input " type="text" placeholder="毕业季" name="searchKey">
+                            <a class="search-icon col-xs-2 iconfont text-center" href="搜索.asp">&#xe652;</a>
+                        </div>
+                    </div>
 
-            <nav clas="main-nav">
-                <!-- 这是导航激活的横条，只有一个，用js控制left的多少来实现效果-->
-                <span class="active-indicator"></span>
-                <!-- 不理解，为什么是clean -->
-                <ul class="clean-list">
-                    <li class="menu-item-has=children active highlighted">
-                        <a href="#"></a>
-                        <ul class="sub-menu">
-                            <li>
-                                <a href="#"></a>
+                    <!-- toggle 是切换的意思，即使用自定义效果来显示或隐藏匹配的元素 -->
+                    <div class="col-xs-3 mobile-nav-button" id="mobile-nav-button">
+                        <i class="mobile-nav-iconfont iconfont text-center">&#xe621;</i>
+                        <span class="mobile-nav-span  text-center">分类</span>
+                    </div>
+                    <!--&lt;!&ndash; 隐藏元素 &ndash;&gt;-->
+                    <!--<div class="login-nav col-xs-12" id="login-nav" role="navigation">-->
+                        <!--<i class="login-nav-arrow iconfont">&#xe6e9;</i>-->
+                        <!--<form class="login-form" id="login-form" method="post" action="login.asp">-->
+                            <!--<div class="input-line">-->
+                                <!--<input type="text" class="form-input check-value" placeholder="" name="userName">-->
+                                <!--<span class="placeholder">账号</span>-->
+                                <!--<span class="bottom-line"></span>-->
+                            <!--</div>-->
+
+                            <!--<div class="input-line">-->
+                                <!--<input type="password" class="form-input check-value" placeholder="" name="password">-->
+                                <!--<span class="placeholder">密码</span>-->
+                                <!--<span class="bottom-line"></span>-->
+                            <!--</div>-->
+
+                            <!--<div class="btn-wrapper submit-btn-wrapper text-center">-->
+                                <!--<input class="btn submit-button chgBgColor" type="submit" value="登录" />-->
+                            <!--</div>-->
+                            <!--<span class="register-span text-center">还没有注册？学号可以<span class="register-link">直接登录</span>哦~</span>-->
+                            <!--<span class="register-des text-center">首次登录账号密码均为学号</span>-->
+                        <!--</form>-->
+                    <!--</div>-->
+                    <nav class="main-nav nav nav-height col-xs-3" id="navbar" role="navigation">
+                        <ul class="clean-list" id="nav-ul"  role="tablist">
+                            <li class="nav-li words
+                             highlighted" data-category-link="1">
+                                <i class="menu-bullet iconfont">&#xe653;</i>书籍
                             </li>
-                            <li>
-                                <a href="#"></a>
+                            <li class="nav-li words" data-category-link="2">
+                                <i class="menu-bullet iconfont">&#xe653;</i>电子
                             </li>
-                            <li>
-                                <a href="#"></a>
+                            <li class="nav-li words" data-category-link="3">
+                                <i class="menu-bullet iconfont">&#xe653;</i>神器
+                            </li>
+                            <li class="nav-li words" data-category-link="4">
+                                <i class="menu-bullet iconfont">&#xe653;</i>家居
+                            </li>
+                            <li class="nav-li words" data-category-link="5">
+                                <i class="menu-bullet iconfont">&#xe653;</i>衣物
+                            </li>
+                            <li class="nav-li words" data-category-link="6">
+                                <i class="menu-bullet iconfont">&#xe653;</i>护肤
+                            </li>
+                            <li class="nav-li words" data-category-link="7">
+                                <i class="menu-bullet iconfont">&#xe653;</i>美妆
                             </li>
                         </ul>
-                    </li>
-                    <li class="">
-                        <a href="#"></a>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#"></a>
-                        <ul class="sub-menu">
-                            <li></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
+                    </nav>
 
+                </div>
+            </div>
         </header>
 
-        <!-- Content Wrapper -->
-        <div class="content-wrapper">
-            <section class="section section-home no-padding" id="home">
-                <div class="main-slider tt-slider">
-                    <!-- Slider Content -->
-                    <!-- 这里面不是轮播图，而是内容 -->
-                    <!-- slider-content是最外面的，与屏幕同宽，没有内外边距 -->
-                    <div class="slider-content">
-                        <!-- 第二个容器，具有内外边距，这个container的样式与boostrap一样 -->
-                        <div class="container">
-                            <!-- 内部容器，放着左右两个元素，清除父元素的浮动 -->
-                            <div class="inner-content clearfix">
-                                <!-- 这个元素只要设为50%；不需要考虑内外边距 -->
-                                <div class="inner-content-box">
-                                    <!-- 在这里为她设置右padding -->
-                                    <div class="event-info">
-                                        <h1 class="event-name"></h1>
-                                        <!-- 这行底下有一个绿色横条，用的是：after属性，无需另加一个元素，伪元素的高度算在本元素里 -->
-                                        <p class="event-date"></p>
+        <section class="section-refresh">
+        </section>
+        <section class="section-swiper">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="swiper-background swiper-background1"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-background swiper-background2"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="swiper-background swiper-background3"></div>
+                    </div>
+
+                </div>
+                <div class="swiper-web-description">
+                    <p>
+
+                        <span>南财狸猫二手置物</span>
+                        <br/>
+                        只为校内打造
+                        <br/>
+                        线上发布、购买
+                        <br/>
+                        线下约定地点交付
+                    </p>
+                </div>
+                <!-- 如果需要分页器 -->
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </section>
+
+        <!--<section class="section-category" id="category">-->
+            <!--<ul class="nav nav-tabs">-->
+                <!--<li role="presentation" class="active"><a href="#">书籍</a></li>-->
+                <!--<li role="presentation"><a href="#">数码</a></li>-->
+                <!--<li role="presentation"><a href="#">神器</a></li>-->
+                <!--<li role="presentation"><a href="#">家电</a></li>-->
+                <!--<li role="presentation"><a href="#">衣物</a></li>-->
+                <!--<li role="presentation"><a href="#">护肤美妆</a></li>-->
+            <!--</ul>-->
+        <!--</section>-->
+
+        <section class="section-items" id="section-items">
+            <div class="container-fluid">
+                <div class="row">
+
+                    <nav class="col-xs-2 items-nav" id="items-nav">
+                        <ul class="clean-list">
+                            <li data-category-link="0" class="items-link active">全部</li>
+                            <li data-category-link="1" class="items-link">书籍</li>
+                            <li data-category-link="2" class="items-link">电子</li>
+                            <li data-category-link="3" class="items-link">神器</li>
+                            <li data-category-link="4" class="items-link">家居</li>
+                            <li data-category-link="5" class="items-link">衣物</li>
+                            <li data-category-link="6" class="items-link">护肤</li>
+                            <li data-category-link="7" class="items-link">美妆</li>
+                        </ul>
+                    </nav>
+
+                    <div class="col-xs-10 items-wrapper pull-right" id="items-wrapper">
+                        <div class="items-content" data-category-tab="0">
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="inner-content-box">
-
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items-content" data-category-tab="1">
+                            <div class="items-good">
+                                <img src="img/goodImg2.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">耳塞</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥10</span>
+                                            <span class="good-current-price">￥2</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>5成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>16</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg2.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">耳塞</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥10</span>
+                                            <span class="good-current-price">￥2</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>5成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>16</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg2.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">耳塞</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥10</span>
+                                            <span class="good-current-price">￥2</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>5成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>16</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg2.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">耳塞</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥10</span>
+                                            <span class="good-current-price">￥2</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>5成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>16</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg2.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">耳塞</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥10</span>
+                                            <span class="good-current-price">￥2</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>5成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>16</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg2.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">耳塞</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥10</span>
+                                            <span class="good-current-price">￥2</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>5成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>16</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg2.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">耳塞</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥10</span>
+                                            <span class="good-current-price">￥2</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>5成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>16</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg2.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">耳塞</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥10</span>
+                                            <span class="good-current-price">￥2</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>5成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>16</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg2.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">耳塞</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥10</span>
+                                            <span class="good-current-price">￥2</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>5成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>16</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg2.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">耳塞</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥10</span>
+                                            <span class="good-current-price">￥2</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>5成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>16</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items-content" data-category-tab="2">
+                            <div class="items-good">
+                                <img src="img/goodImg3.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">晨光彩色铅笔</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥40</span>
+                                            <span class="good-current-price">￥6</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg3.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">晨光彩色铅笔</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥40</span>
+                                            <span class="good-current-price">￥6</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg3.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">晨光彩色铅笔</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥40</span>
+                                            <span class="good-current-price">￥6</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg3.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">晨光彩色铅笔</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥40</span>
+                                            <span class="good-current-price">￥6</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg3.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">晨光彩色铅笔</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥40</span>
+                                            <span class="good-current-price">￥6</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg3.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">晨光彩色铅笔</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥40</span>
+                                            <span class="good-current-price">￥6</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg3.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">晨光彩色铅笔</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥40</span>
+                                            <span class="good-current-price">￥6</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg3.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">晨光彩色铅笔</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥40</span>
+                                            <span class="good-current-price">￥6</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg3.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">晨光彩色铅笔</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥40</span>
+                                            <span class="good-current-price">￥6</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items-content" data-category-tab="3">
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">afsdfasdfasdfasdfasdfdsfa啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items-content" data-category-tab="4">
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">afsdfasdfasdfasdfasdfdsfa啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items-content" data-category-tab="5">
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">afsdfasdfasdfasdfasdfdsfa啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items-content" data-category-tab="6">
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">afsdfasdfasdfasdfasdfdsfa啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="items-content" data-category-tab="7">
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">afsdfasdfasdfasdfasdfdsfa啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items-good">
+                                <img src="img/goodImg1.jpg" alt="#">
+                                <div class="items-good-info">
+                                    <h4 class="good-title">三顿半 原创 / 第2代精品冷萃黑咖啡粉 现磨滤包20g*8 送冷萃杯</h4>
+                                    <div class="good-nums row">
+                                        <div class="pull-left good-discount text-center">
+                                            <span class="good-origin-price">￥89</span>
+                                            <span class="good-current-price">￥20</span>
+                                        </div>
+                                        <div class="pull-right good-detail">
+                                            <span class="good-damage"><i class="good-damage-iconfont iconfont">&#xe6a7;</i>9成新</span>
+                                            <span class="good-visit"><i class="good-damage-visit iconfont">&#xe693;</i>23</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
 
 
-        <footer class="main-footer"></footer>
+        <footer class="main-footer">
+            <a class="tab-list active" id="homepage-button"  href="index.html">
+                <i class="tab-icon iconfont">&#xe619;</i>
+                <span class="tab-title">主页</span>
+            </a>
+            <a class="tab-list" id="upload-button"  href="login.html">
+                <i class="tab-icon iconfont">&#xe6e8;</i>
+                <span class="tab-title">发布</span>
+            </a>
+            <a class="tab-list" id="cart-button" href="login.html">
+                <i class="tab-icon iconfont">&#xe639;</i>
+                <span class="tab-title">购物车</span>
+            </a>
+            <a class="tab-list " id="message-page-button" href="login.html">
+                <i class="tab-icon iconfont">&#xe617;</i>
+                <span class="tab-title">消息</span>
+            </a>
+            <a class="tab-list " id="profile-button" href="login.html">
+                <i class="tab-icon iconfont">&#xe625;</i>
+                <span class="tab-title">我的</span>
+            </a>
+        </footer>
     </div>
+    <script>
+        var mySwiper = new Swiper ('.swiper-container', {
+
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+        })
+    </script>
 </body>
 </html>
